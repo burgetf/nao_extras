@@ -47,6 +47,7 @@
 #include <sensor_msgs/Joy.h>
 
 
+
 namespace nao_teleop{
 /**
  * \brief Nao Teleoperation via Joystick. Ct
@@ -60,6 +61,7 @@ public:
   void pubMsg();
   ros::NodeHandle nh;
   ros::NodeHandle privateNh;
+  
 
   /**
    * \brief Subscribe to joystick using default hander (TeleopNaoJoy::joyCallback).
@@ -86,7 +88,7 @@ protected:
   bool m_enabled;
 
 
-
+  
   /**
    * \brief Subscribe to joystick using this callback function.
    *

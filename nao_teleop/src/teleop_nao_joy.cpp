@@ -67,7 +67,7 @@ TeleopNaoJoy::TeleopNaoJoy()
   m_headAngles.relative = 0;
   m_headAngles.speed = 0.2; // TODO: param
 
-  m_movePub = nh.advertise<geometry_msgs::Twist>("cmd_vel", 10);
+  m_movePub = nh.advertise<geometry_msgs::Twist>("cmd_vel_original", 10);
   m_headPub = nh.advertise<nao_msgs::JointAnglesWithSpeed>("joint_angles", 1);
   m_speechPub = nh.advertise<std_msgs::String>("speech", 1);
   m_inhibitWalkSrv = nh.advertiseService("inhibit_walk", &TeleopNaoJoy::inhibitWalk, this);
