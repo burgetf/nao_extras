@@ -27,21 +27,15 @@ add_library(${PROJECT_NAME} src/teleop_nao_joy.cpp)
 target_link_libraries(${PROJECT_NAME} ${catkin_LIBRARIES} )
 add_dependencies(${PROJECT_NAME} ${catkin_EXPORTED_TARGETS})
 
-#Create target nao_teleop library
-#add_library(${PROJECT_NAME} src/teleop_nao_joy_test.cpp)
-#target_link_libraries(${PROJECT_NAME} ${catkin_LIBRARIES} )
-#add_dependencies(${PROJECT_NAME} ${catkin_EXPORTED_TARGETS})
-
 #Create nao_teleop_node binary
 add_executable(teleop_nao_joy src/teleop_nao_joy_node.cpp)
 target_link_libraries(teleop_nao_joy ${PROJECT_NAME} ${catkin_LIBRARIES})
 add_dependencies(teleop_nao_joy ${catkin_EXPORTED_TARGETS})
 
-#Create nao_teleop_node binary
-#add_executable(teleop_nao_joy_test src/teleop_nao_joy_node.cpp)
 
-#target_link_libraries(teleop_nao_joy_test ${PROJECT_NAME} ${catkin_LIBRARIES})
-#add_dependencies(teleop_nao_joy_test ${catkin_EXPORTED_TARGETS})
+add_executable(random_nao_joy src/random_nao_joy.cpp)
+target_link_libraries(random_nao_joy ${catkin_LIBRARIES})
+add_dependencies(random_nao_joy ${catkin_EXPORTED_TARGETS})
 
 
 # Installation instructions for library

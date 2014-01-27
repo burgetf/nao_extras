@@ -2,5 +2,8 @@
 
 <launch>
   <node pkg="nao_teleop" type="teleop_nao_joy" name="teleop_nao_joy" output="screen"/>
-  <node pkg="joy" type="joy_node" name="joy_node" />
+  <node pkg="joy" type="joy_node" name="joy_node" output="screen"/>
+  <!-- The node modifying the gamepad commands -->
+  <node pkg="nao_teleop" type="random_nao_joy" name="random_nao_joy" output="screen"/>
+  
 </launch>
